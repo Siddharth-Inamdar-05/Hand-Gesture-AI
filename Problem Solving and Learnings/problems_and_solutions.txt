@@ -1,0 +1,31 @@
+Gesture: Play / Pause
+Problem: Music restarted multiple times while hand was still up.
+Cause: Frame-by-frame detection triggered repeated inputs.
+Solution: Added state logic and cooldown system.
+
+Gesture: Volume Up / Down
+Problem: Confused with open_palm or thumbs_up.
+Cause: Similar finger posture and overlapping landmarks.
+Solution: Added hold confirmation + retrained with 60 new samples per gesture.
+
+Gesture: Spotify Focus
+Problem: Spotify window not always detected.
+Cause: “Spotify” title overlapped with VSCode or OpenCV windows.
+Solution: Refined focus detection, ignored “Code”, “main.py”, and “OpenCV”.
+
+Gesture: Webcam Lag
+Problem: Frame rate dropped to <10 FPS.
+Cause: High resolution and continuous landmark processing.
+Solution: Reduced resolution to 640×480 and added frame delay.
+
+Gesture: Model Accuracy
+Problem: Some gestures misclassified.
+Cause: Class imbalance in dataset.
+Solution: Expanded dataset to 2115 total samples and retrained for 94.9% accuracy.
+
+Gesture: Stability
+Problem: Sudden flickering between gestures.
+Cause: Model reacted to single-frame variations.
+Solution: Added frame buffer confirmation logic.
+
+# TODO: Add new gesture issues (e.g., minimize, maximize, playlist control)
