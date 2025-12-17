@@ -14,8 +14,7 @@ A real-time AI system that controls Spotify using hand gestures. Built with Open
 ---
 
 ## 🎥 Demo
-🎬 Watch Demo Video: [Add YouTube or LinkedIn link here]
-
+🎬 Watch Demo Video:I have added the video in "Uploaded" folder. Please download the video to watch.
 This demo showcases full control of Spotify through gestures such as play/pause, like, volume control, and track switching.
 
 ---
